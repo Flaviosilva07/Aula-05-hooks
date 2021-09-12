@@ -1,31 +1,31 @@
-import './Content.css'
-import React from "react"
-import { Switch, Route } from 'react-router-dom'
-import Home from '../../views/contents/Home'
-import Conteudo01 from '../../views/contents/Conteudo01'
-import Conteudo02 from '../../views/contents/Conteudo02'
-import Conteudo03 from '../../views/contents/Conteudo03'
-import NaoEncontrado from '../../views/contents//NaoEncontrado'
+import './content.css'
+import react, { useState } from "react"
+import {Switch, route } from 'react-router-dom'
+import hooks from '../../views/contents/hooks'
+import usestate from '../../views/contents/usestate'
+import useeffect from '../../views/contents/useeffect'
+import usecontext from '../../views/contents/usecontext'
+import NaoEncontrado from '../../views/contents/NaoEncontrado'
 
-const Content = props => (
-    <main className="Content">
-        <Switch>
-            <Route exact path="/">
-                <Home />
-            </Route>
-            <Route path="/conteudo01/:usuario">
-                <Conteudo01 />
-            </Route>
-            <Route path="/conteudo02">
-                <Conteudo02 />
-            </Route>
-            <Route path="/conteudo03">
-                <Conteudo03 />
-            </Route>
-            <Route path="*">
-                <NaoEncontrado />
-            </Route>            
-        </Switch>
-    </main>
+const content = props=>(
+    <main classname="content">
+        <switch>
+        <route exact path="/">
+                   <hooks/>
+            </route>  
+            <route path="/usestate">
+                   <useState/>
+            </route>    
+            <route path="/useeffect">
+                   <useState/>
+            </route>    
+            <route path="/usecontext">
+                   <useState/>
+            </route>    
+            <route path="*">
+                   <NaoEncontrado/>
+            </route>       
+        </switch>
+    </main>    
 )
-export default Content
+export default content

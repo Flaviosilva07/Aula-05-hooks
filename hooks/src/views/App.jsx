@@ -1,16 +1,21 @@
-import './App.css'
-import React from "react"
-import { BrowserRouter as Router } from 'react-router-dom'
-import Menu from '../components/layout/Menu'
-import Content from '../components/layout/Content'
+import './app.css'
+import react from "react"
+import {browserrouter as router} from 'react-router-dom'
+import menu from '../componets/layout/menu'
+import content from '../components/layout/contents'
 
-const App = props => (
-    <div className="App">
-        <Router>
-            <Menu />
-            <Content />
-        </Router>        
-    </div>
-)
+import store from '../data/store'
 
-export default App
+const app = props=> {
+    return(
+        <store>
+            <div className="app">
+                <router>
+                    <menu/>
+                    <content/>
+                </router>
+            </div>
+        </store> 
+    )
+}
+export default app
